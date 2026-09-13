@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { projectAPI } from '../services/api'
 import { Building2, ClipboardCheck, Users, ChevronRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
-import heroBg from '../assets/images/7-hero.jpg'
-import introImg from '../assets/images/3-intro.jpg'
+import heroBg from '../assets/images/Borj Al-Arab Background.jpg'
+import introImg from '../assets/images/Borj Al-Arab Background 2.jpg'
 import PageHero from '../components/PageHero'
 import ServiceCard from '../components/ServiceCard'
 import ProjectCard from '../components/ProjectCard'
@@ -64,7 +64,7 @@ export default function Home() {
               {t('hero.desc')}
             </p>
             <div className="hero-actions">
-              <Link to="/consultation" className="btn btn-gold-outline btn-lg">
+              <Link to="/consultation" className="btn btn-primary btn-lg">
                 {t('hero.contact')}
               </Link>
             </div>
@@ -204,6 +204,11 @@ export default function Home() {
             <p className="cta-desc">
               {t('home.cta.desc')}
             </p>
+            <div className="cta-actions">
+              <Link to="/consultation" className="btn btn-primary btn-lg">
+                {t('hero.contact')}
+              </Link>
+            </div>
           </div>
         </div>
       </section>

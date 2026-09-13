@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import { Menu, X, Building2 } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import LanguageSwitcher from './LanguageSwitcher'
+import logo from '../assets/images/logo.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,7 +25,7 @@ export default function Navbar() {
     <header className="navbar" role="banner">
       <div className="container navbar-inner">
         <NavLink to="/" className="logo" aria-label={t('nav.home')}>
-          <Building2 className="logo-icon" aria-hidden="true" />
+          <img src={logo} alt={t('site.name')} className="logo-img" />
           <div className="logo-text">
             <span className="logo-line">{t('nav.home') === 'Home' ? 'Burj Al Arab' : 'برج العرب'}</span>
             <span className="logo-sublime">{t('site.tagline')}</span>

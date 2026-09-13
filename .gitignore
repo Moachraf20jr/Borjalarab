@@ -42,10 +42,15 @@ backend/uploads/**/*
 # Test coverage
 coverage/
 
-# Unused template image library (keep only the two imported by the app)
+# Unused template image library (keep only the assets referenced by the app)
 src/assets/images/*
 !src/assets/images/7-hero.jpg
 !src/assets/images/3-intro.jpg
+!src/assets/images/logo.png
+!src/assets/images/Borj Al-Arab Background.jpg
+!src/assets/images/Borj Al-Arab Background 2.jpg
+!src/assets/images/Borj Al-Arab Background 3.jpg
+!src/assets/images/Borj Al-Arab Background4.jpg
 
 # Misc
 *.pem

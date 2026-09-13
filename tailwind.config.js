@@ -5,16 +5,21 @@ export default {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#1D3043',
-          dark: '#172A3C',
+          DEFAULT: '#12230E',
+          dark: '#0D1A0B',
         },
         gold: {
-          DEFAULT: '#A57A42',
-          hover: '#8F6738',
+          DEFAULT: '#C76734',
+          hover: '#A85728',
         },
-        'text-muted': '#74808C',
-        'text-main': '#243445',
-        border: '#DEDFE1',
+        ink: '#12230E',
+        terracotta: '#C76734',
+        support: '#A9CCD8',
+        cream: '#FAF8F5',
+        stone: '#E4DED6',
+        'text-muted': '#6A7862',
+        'text-main': '#24301F',
+        border: '#E4DED6',
       },
       fontFamily: {
         sans: ['Cairo', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],

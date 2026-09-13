@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { MapPin, Phone, Mail } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { socialLinks, CONTACT_INFO } from '../config/social'
+import logo from '../assets/images/logo.png'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -34,8 +35,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="logo-line">{t('site.name').split(/\s/).slice(0, 2).join(' ') === 'Burj Al' ? 'Burj Al Arab' : 'برج العرب'}</span>
-              <span className="logo-sublime">{t('site.tagline')}</span>
+              <img src={logo} alt={t('site.name')} className="footer-logo-img" />
             </div>
             <p className="footer-desc">{t('site.name')}</p>
             <div className="footer-social" role="list" aria-label={t('footer.socials')}>
