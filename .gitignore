@@ -35,7 +35,6 @@ lerna-debug.log*
 Thumbs.db
 
 # Uploads (keep directory structure)
-uploads/
 backend/uploads/**/*
 !backend/uploads/.gitkeep
 
