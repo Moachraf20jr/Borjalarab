@@ -4,11 +4,6 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev:frontend",
   "outputDirectory": "dist",
-  "functions": {
-    "api/index.mjs": {
-      "includeFiles": "backend/uploads/**"
-    }
-  },
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" },
     { "source": "/(.*)", "destination": "/index.html" }
