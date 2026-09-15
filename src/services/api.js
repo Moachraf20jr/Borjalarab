@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const DEFAULT_API_URL = (['localhost', '127.0.0.1'].includes(window.location.hostname))
+  ? 'http://localhost:5000/api'
+  : '/api'
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || DEFAULT_API_URL
 
 export const resolveImageUrl = (path) => {
   if (!path) return ''

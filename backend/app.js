@@ -34,7 +34,11 @@ const allowedOrigins = (process.env.CLIENT_URL || 'http://localhost:5173')
 
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (
+      !origin ||
+      allowedOrigins.includes(origin) ||
+      /^https?:\/\/[\w-]+\.vercel\.app$/.test(origin)
+    ) {
       return callback(null, true)
     }
     return callback(null, false)
