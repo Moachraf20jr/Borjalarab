@@ -822,7 +822,8 @@ html[dir="ltr"] .footer-logo-img {
 .service-card.featured .badge-number {
   position: absolute;
   top: -14px;
-  right: 24px;
+  left: 24px;
+  right: auto;
 }
 
 .service-icon {
@@ -1295,9 +1296,19 @@ html[dir="ltr"] .footer-logo-img {
   overflow: hidden;
 }
 
+.about-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .about-shape {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background-image: 
     radial-gradient(circle at 30% 30%, rgba(199, 103, 52, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 70% 70%, rgba(199, 103, 52, 0.1) 0%, transparent 50%);

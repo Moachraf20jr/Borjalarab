@@ -4,6 +4,7 @@ import { teamAPI, resolveImageUrl } from '../services/api'
 import { Target, Eye, Heart, Users } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import ServiceCard from '../components/ServiceCard'
+import aboutImg from '../assets/images/Borj Al-Arab Background 2.jpg'
 
 const valueData = [
   { key: 'about.value1', descKey: 'about.value1d', icon: Target },
@@ -60,6 +61,7 @@ export default function About() {
               <p className="about-desc">{t('about.intro.p2')}</p>
             </div>
             <div className="about-visual" aria-hidden="true">
+              <img src={aboutImg} alt="" className="about-visual-img" />
               <div className="about-shape"></div>
             </div>
           </div>
