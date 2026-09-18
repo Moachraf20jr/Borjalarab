@@ -3,8 +3,8 @@ import { WhatsAppIcon, TikTokIcon, XIcon } from '../components/SocialIcons'
 
 // Centralized social media configuration.
 // - Set the real account URLs here or via env vars (VITE_*).
-// - Footer renders icons from this list.
-const tiktokUrl = import.meta.env.VITE_TIKTOK_URL || 'https://www.tiktok.com/@borjalarab97'
+// - Icons are rendered from this list.
+const tiktokUrl = import.meta.env.VITE_TIKTOK_URL || 'https://www.tiktok.com/@BorjAlArab97'
 const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '966502331197'
 const instagramUrl = import.meta.env.VITE_INSTAGRAM_URL || 'https://www.instagram.com/borjalarab97/'
 const facebookUrl = import.meta.env.VITE_FACEBOOK_URL || 'https://www.facebook.com/profile.php?id=61594331250876'
