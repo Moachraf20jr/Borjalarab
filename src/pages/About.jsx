@@ -54,7 +54,7 @@ export default function About() {
           <div className="about-grid">
             <div className="about-content">
               <span className="section-label">{t('about.intro.label')}</span>
-              <h2 id="about-intro-title" className="section-title" style={{ textAlign: 'right', maxWidth: 'none' }}>
+              <h2 id="about-intro-title" className="section-title about-intro-title">
                 {t('about.intro.title')}
               </h2>
               <p className="about-desc">{t('about.intro.p1')}</p>

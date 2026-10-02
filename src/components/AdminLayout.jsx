@@ -49,7 +49,7 @@ export default function AdminLayout() {
               ? 'translate-x-full lg:translate-x-0'
               : '-translate-x-full lg:translate-x-0'
         }`}
-        style={{ width: '260px' }}
+        style={{ width: '16rem' }}
         aria-label={t('admin.aria.sidebar')}
       >
         <div className="flex flex-col h-full">
@@ -107,10 +107,10 @@ export default function AdminLayout() {
       )}
 
       <div className={`${isAr ? 'lg:mr-64' : 'lg:ml-64'} min-h-screen`}>
-        <header className="sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-3 lg:px-6">
-          <div className="flex items-center justify-between">
+        <header className="admin-topbar sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-3 lg:px-6">
+          <div className="flex items-center justify-between gap-3">
             <button
-              className="lg:hidden p-2 rounded-lg text-navy hover:bg-gray-100 transition-colors"
+              className="lg:hidden shrink-0 p-2 rounded-lg text-navy hover:bg-gray-100 transition-colors"
               onClick={() => setSidebarOpen(true)}
               aria-label={t('admin.aria.openMenu')}
               aria-expanded={sidebarOpen}
@@ -118,10 +118,10 @@ export default function AdminLayout() {
               <Menu size={24} aria-hidden="true" />
             </button>
             <div className="flex-1 lg:hidden" />
-            <div className="flex items-center gap-4">
-              <div className={`hidden sm:block ${isAr ? 'text-right' : 'text-left'}`}>
-                <p className="text-sm font-medium text-navy">{user?.name}</p>
-                <p className="text-xs text-text-muted capitalize">{user?.role}</p>
+            <div className="flex items-center gap-4 min-w-0">
+              <div className={`hidden sm:block min-w-0 ${isAr ? 'text-right' : 'text-left'}`}>
+                <p className="text-sm font-medium text-navy truncate">{user?.name}</p>
+                <p className="text-xs text-text-muted capitalize truncate">{user?.role}</p>
               </div>
             </div>
           </div>

@@ -140,7 +140,7 @@ export default function AdminConsultations() {
               className="w-full pr-10 pl-4 py-2.5 border border-gray-200 rounded-lg focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none"
             />
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <label htmlFor="status-filter" className="text-sm font-medium text-text-muted">{t('admin.filter.label')}</label>
             <select
               id="status-filter"
@@ -274,7 +274,7 @@ export default function AdminConsultations() {
 
       {showModal && selectedConsultation && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50" onClick={() => setShowModal(false)}>
-          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+          <div className="bg-white rounded-2xl max-w-2xl w-full admin-modal-panel overflow-y-auto" onClick={e => e.stopPropagation()}>
             <div className="p-6 border-b border-gray-100 flex items-center justify-between">
               <h2 className="text-xl font-bold text-navy">{t('admin.modal.details')}</h2>
               <button onClick={() => setShowModal(false)} className="p-2 text-text-muted hover:text-navy rounded-lg hover:bg-gray-100" aria-label={t('admin.aria.close')}>

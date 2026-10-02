@@ -8,7 +8,7 @@ export default function ToastContainer() {
 
   return (
     <div
-      className="fixed top-4 left-4 z-50 flex flex-col gap-2 max-w-md w-full"
+      className="toast-container"
       style={{ pointerEvents: 'none' }}
       aria-live="polite"
       aria-label="الإشعارات"

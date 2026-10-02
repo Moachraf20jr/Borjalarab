@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -21,10 +21,24 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
 
+  // The menu must never stay open behind a new page, and Escape must close it.
+  useEffect(() => {
+    closeMenu()
+  }, [location.pathname])
+
+  useEffect(() => {
+    if (!isOpen) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') closeMenu()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isOpen])
+
   return (
     <header className="navbar" role="banner">
       <div className="container navbar-inner">
-        <NavLink to="/" className="logo" aria-label={t('nav.home')}>
+        <NavLink to="/" className="logo" aria-label={t('nav.home')} onClick={closeMenu}>
           <img src={logo} alt={t('site.name')} className="logo-img" />
           <div className="logo-text">
             <span className="logo-line">{t('nav.home') === 'Home' ? 'Burj Al Arab' : 'برج العرب'}</span>
@@ -32,7 +46,12 @@ export default function Navbar() {
           </div>
         </NavLink>
 
-        <nav className={`nav-menu ${isOpen ? 'open' : ''}`} role="navigation" aria-label={t('nav.home') === 'Home' ? 'Main menu' : 'القائمة الرئيسية'}>
+        <nav
+          id="nav-menu"
+          className={`nav-menu ${isOpen ? 'open' : ''}`}
+          role="navigation"
+          aria-label={t('nav.home') === 'Home' ? 'Main menu' : 'القائمة الرئيسية'}
+        >
           <ul className="nav-list">
             {navItems.map((item) => (
               <li key={item.path}>
@@ -58,7 +77,7 @@ export default function Navbar() {
             aria-controls="nav-menu"
             aria-label={isOpen ? t('nav.close') : t('nav.open')}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
       </div>

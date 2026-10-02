@@ -158,7 +158,7 @@ export default function AdminLogin() {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className={`absolute ${isAr ? 'left-4' : 'right-4'} top-1/2 -translate-y-1/2 text-text-muted hover:text-navy transition-colors`}
+                    className={`password-toggle absolute ${isAr ? 'left-1' : 'right-1'} top-1/2 -translate-y-1/2 text-text-muted hover:text-navy transition-colors`}
                     aria-label={showPassword ? t('admin.login.hidePassword') : t('admin.login.showPassword')}
                   >
                     {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
