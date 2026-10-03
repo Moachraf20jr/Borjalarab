@@ -889,10 +889,14 @@ html[dir="ltr"] .footer-logo-img {
   min-width: 0;
 }
 
-.service-card.featured .badge-number {
-  position: absolute;
-  top: -14px;
-  inset-inline-start: 24px;
+/* Number and icon are siblings in a flex row. They were previously pulled out
+   of flow with position:absolute, which resolved against the card and dropped
+   the 48px badge straight onto the 60px icon at every viewport width. */
+.service-card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .service-icon {
@@ -906,7 +910,6 @@ html[dir="ltr"] .footer-logo-img {
   background: transparent;
   border: 2px solid var(--primary);
   color: var(--primary);
-  margin-bottom: 20px;
 }
 
 .service-title {
